@@ -15,16 +15,14 @@ namespace Laboratory
         {
             int numberOfColumns = grid.GetLength(1);
 
-            int x = sequenceNum - (int)((Math.Ceiling((decimal)sequenceNum / numberOfColumns) - 1) * numberOfColumns);
+            return ((sequenceNum - 1) % numberOfColumns) + 1;
 
-            return x;
         }
 
         public int FindY(int sequenceNum, int[,] grid)
         {
             int numberOfColumns = grid.GetLength(1);
-            int y = (int)(Math.Ceiling((decimal)sequenceNum / numberOfColumns));
-            return y;
+            return (int)(Math.Ceiling((decimal)sequenceNum / numberOfColumns));
         }
 
         //////////// PRESENTATION STUFF ///////////////
